@@ -1,13 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,800);
 
-/* selector universal */
+
+/**************************
+******* GENERALES ********
+*************************/
+
 * {
-	box-sizing: border-box; 
+	box-sizing: border-box;
 }
 
 body {
 	font-family: 'Raleway', sans-serif;
 	margin: 0px;
+}
+
+img {
+	max-width: 100%;
 }
 
 ul, ol {
@@ -20,8 +28,13 @@ figure {
 	margin: 0;
 }
 
+
+/**************************
+******** HEADER **********
+*************************/
+
 .main-header {
-	width: 1200px;
+	max-width: 1200px;
 	margin: auto;
 	padding: 20px 0px;
 }
@@ -32,67 +45,609 @@ figure {
 
 .main-nav {
 	float: right;
-	}
+}
 
-/* selector descendiente*/
-.main-nav li{
+.main-nav li {
 	float: left;
-	margin: 8px 0 0 15px	
+	margin: 8px 0 0 25px;
+}
+
+.main-nav a {
+	text-decoration: none;
+	color: black;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+}
+
+.main-nav a:hover {
+	color: grey;
 }
 
 .cleaner {
 	clear: both;
 }
 
+
+/**************************
+******** BANNER **********
+*************************/
+
 #banner {
 	background: url(../images/indexbanner-bg3.jpg) center top no-repeat;
 	background-size: cover;
+	height: 500px;
+	margin-top: 15px;
 }
 
 .container {
-	width: 1200px;
+	max-width: 1200px;
 	margin: auto;
 }
 
 .banner-title {
-	font-size: 50px;
+	font-size: 40px;
+	font-weight: 800;
 	color: white;
-	padding-top: 120px;
+	padding-top: 200px;
 	margin: 0;
+	letter-spacing: 1px;
 }
 
 .banner-text {
-	font-size: 20px;
-	color: #fff;
+	font-size: 16px;
+	line-height: 30px;
+	color: grey;
 }
 
 .register {
 	background-color: #06b4f2;
 	position: relative;
-	top: 30px;
+	top: 130px;
 }
 
 .register input {
-	width: 1000px;
+	width: 83%;
 	height: 60px;
 	font-size: 16px;
 	font-family: inherit;
+	padding-left: 25px;
+	border: none;
+	box-shadow: 0px 0px 13px -5px rgba(112,108,112,0.77);
 }
 
 .register button {
 	border: none;
 	background-color: #06b4f2;
-	width: 195px;
+	width: 16%;
 	height: 60px;
 	color: #fff;
 	font-family: inherit;
 	font-size: 16px;
 }
 
-.producto {
-	border: dashed 1px green;
-	width: 300px;
+
+/**************************
+******* PRODUCTOS ********
+*************************/
+
+.products {
+	padding-bottom: 50px;
+}
+
+.box-product {
+	width: 25%;
 	text-align: center;
 	float: left;
+	margin-top: 8%;
+	padding: 30px;
+}
+
+.box-product h4 {
+	text-transform: uppercase;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+.box-product p{
+	font-size: 14px;
+	line-height: 20px;
+}
+
+
+/**************************
+******* SERVICIOS ********
+*************************/
+
+.services {
+	text-align: center;
+}
+
+.services h2 {
+	font-size: 35px;
+	font-weight: 800;
+}
+
+.services p {
+	font-size: 16px;
+	line-height: 20px;
+	color: grey;
+}
+
+#service-left {
+	float: left;
+	width: 33%;
+	padding-top: 75px;
+}
+
+#service-left h3 {
+	font-weight: 800;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+#service-left p {
+	color: black;
+}
+
+#service-left li {
+	position: relative;
+	padding-right: 60px;
+	text-align: right;
+	margin-bottom: 25%;
+}
+
+#service-left li p {
+	font-size: 12px;
+}
+
+#service-left li img {
+	position: absolute;
+	right: 0px;
+	top: -20px;
+}
+
+#service-phone {
+	float: left;
+	width: 33%;
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+#service-right {
+	float: left;
+	width: 33%;
+	padding-top: 75px;
+}
+
+#service-right h3 {
+	font-weight: 800;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+#service-right p {
+	color: black;
+}
+
+#service-right li {
+	position: relative;
+	padding-left: 60px;
+	text-align: left;
+	margin-bottom: 25%;
+}
+
+#service-right li p {
+	font-size: 12px;
+}
+
+#service-right li img {
+	position: absolute;
+	left: 0px;
+	top: -20px;
+}
+
+
+/**************************
+********* PRECIOS ********
+*************************/
+
+#banner-prices {
+	background: url(../images/pricing-bg.jpg) center top no-repeat;
+	background-size: contain;
+	margin-top: -80px;
+}
+
+.prices {
+	padding-top: 100px;
+}
+
+.prices h2 {
+	font-size: 35px;
+	font-weight: 800;
+	text-align: center;
+}
+
+.prices p {
+	font-size: 16px;
+	line-height: 20px;
+	color: grey;
+	text-align: center;
+}
+
+.table-price {
+	text-align: center;
+	width: 22%;
+	float: left;
+	background-color: white; 
+	padding: 50px;
+	margin-top: 50px;
+	margin-left: 2%;
+	box-shadow: 0px 0px 13px -5px rgba(112,108,112,0.10);
+	border: solid 1px #EFEFEF;
+}
+
+.table-price h4 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+}
+
+.table-price h2 {
+	font-size: 62px;
+	font-family: Trebuchet MS;
+	letter-spacing:-5px;
+	margin-top: 1px;
+}
+
+.table-price sup {
+	font-size: 28px;
+	letter-spacing:2px;
+}
+
+.table-price p {
+	margin-top: -60px;
+}
+
+.table-price table {
+	width: 100%;
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.button-plan {
+	text-decoration: none;
+	margin-top: 20px;
+	background-color: #06b4f2;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: 100%;
+	padding: 10px 20px 10px 20px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+
+/**************************
+********* FOOTER *********
+*************************/
+
+.main-footer {
+	text-align: center;
+	background-color: #233141;
+	margin: auto;
+}
+
+.main-footer h3 {
+	color: white;
+	font-weight: 500;
+	font-size: 25px;
+	padding: 80px 0 40px 0;
+}
+
+.main-footer span {
+	font-weight: 800;
+	color: #1e6cdb;
+}
+
+.bg-dark {
+	width: 100%;
+	background-color: #151d26;
+	margin-bottom: 0;
+	padding: 30px 0 60px 0;
+}
+
+.copyright {
+	color: #b7bfc6;
+	font-size: 10px;
+	float: left;
+	margin-left: 130px;
+}
+
+.footer-nav {
+	float: right;
+	margin-right: 130px;
+}
+
+.footer-nav li {
+	float: left;
+	margin: 8px 0 0 25px;
+}
+
+.footer-nav a {
+	text-decoration: none;
+	color: #b7bfc6;
+	font-size: 12px;
+}
+
+/************************************************************************/
+
+
+/**************************
+***** HEADER-CONTACTO ****
+*************************/
+
+#banner-contact {
+	background: url(../images/indexbanner-bg2.jpg) center top no-repeat;
+	background-size: cover;
+	height: 500px;
+	margin-top: 15px;
+}
+
+/**************************
+***** FORM-CONTACTO ****
+*************************/
+
+.form-contact {
+	text-align: center;
+	padding-top: 70px;
+}
+
+.form-contact h2 {
+	font-size: 35px;
+	font-weight: 800;
+}
+
+.form-contact p {
+	font-size: 16px;
+	line-height: 20px;
+	color: grey;
+}
+
+.input-contact {
+	width: 100%;
+}
+
+.input-left {
+	float: left;
+	width: 50%;
+	height: 190px;
+}
+
+.input-left input {
+	width: 95%;
+	height: 50px;
+	padding-left: 10px;
+	border: solid 1px #e1e3e4;
+	font-family: 'Raleway', sans-serif;
+	color: grey;
+}
+.input-2 {
+	margin-top: 20px;
+}
+
+.input-3 {
+	margin-top: 20px;
+}
+
+.input-right {
+	width: 50%;
+	float: right;
+	height: 190px;
+}
+
+.input-right textarea {
+	width: 95%;
+	height: 190px;
+	padding: 10px 0 0 10px;
+	border: solid 1px #e1e3e4;
+	font-family: 'Raleway', sans-serif;
+	color: grey;
+}
+
+.button-contact button {
+	margin-top: 40px;
+	margin-bottom: 100px;
+	text-decoration: none;
+	background-color: #06b4f2;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 15px 45px 15px 45px;
+	border-radius: 5px;
+	border: none;
+}
+
+/************************************************************************/
+
+
+/**************************
+***** MEDIA-QUERIES ******
+*************************/
+
+@media (max-width: 800px) {
+	.container, .main-header {
+		width: 95%;
+}
+
+.box-product {
+	width: 50%;
+}
+
+.logo {
+	float: none;
+}
+
+.main-nav {
+	float: none;
+	text-align: center;
+	margin-top: -20px;
+}
+
+.main-nav li {
+	float: none;
+	display: inline-block;
+}
+
+.prices {
 	margin-top: 100px;
+	padding-top: 75px;
+}
+
+.table-price {
+	width: 47%;
+	margin-left: 4%;
+}
+
+.table-price:nth-of-type(2n+1) {
+	margin-left: 0;
+}
+
+.table-price table {
+	font-size: 12px;
+} 
+
+.copyright {
+	float: none;
+	margin: 0;
+}
+
+.footer-nav {
+	float: none;
+	margin: 10px 20px 0 0;
+}
+
+.footer-nav li {
+	display: inline-block;
+	float: none;
+}
+
+/**************************/
+
+
+@media (max-width: 600px) {
+	.container, .main-header {
+		width: 95%;
+}
+
+#banner {
+	background-image: none;
+	height: 150px;
+} 
+
+.banner-title {
+	display: none;
+}
+
+.banner-text {
+	display: none;
+}
+
+.register {
+	top: 20px;
+}
+
+.logo {
+	float: none;
+	text-align: center;
+}
+
+.main-nav {
+	float: none;
+	margin-top: 10px;
+}
+
+.main-nav li {
+	float: none;
+	display: block;
+}
+
+#service-left, #service-right, #service-phone {
+	float: none;
+	width: 100%;
+}
+
+#service-left li {
+	padding-right: 0;
+	padding-left: 60px;
+	text-align: left;
+	margin-bottom: 10%;
+}
+
+#service-right li {
+	margin-bottom: 10%;
+}
+
+#service-left li img {
+	left: 0px;
+}
+
+.prices {
+	margin-top: 150px;
+	padding-top: 10px;
+}
+
+#banner-contact {
+	background-image: none;
+	height: 50px;
+}
+
+.form-contact {
+	padding-top: 0px;
+}
+
+.input-left {
+	float: none;
+	width: 100%;
+}
+
+.input-right {
+	float: none;
+	width: 100%;
+	margin-top: 20px;
+}
+
+/**************************/
+
+@media (max-width: 430px) {
+	.container, .main-header {
+		width: 95%;
+}
+
+.register input {
+	width: 75%;
+	font-size: 10px;
+	padding-left: 10px;
+	margin: 0;
+}
+
+.register button {
+	font-size: 10px;
+	width: 15%;
+	margin-left: 15px;
+}
+
+.prices {
+	margin-top: 120px;
+	padding: 0;
 }
